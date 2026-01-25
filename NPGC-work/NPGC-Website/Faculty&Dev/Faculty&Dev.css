@@ -1,0 +1,439 @@
+/* ================= ROOT & RESET ================= */
+:root {
+  --primary: #A71836;
+  --primary-soft: rgba(167, 24, 54, 0.12);
+  --dark: #1f2937;
+  --muted: #6b7280;
+  --bg: #f4f7fb;
+  --card-radius: 14px;
+  --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* ================= HERO / BANNER ================= */
+.containers {
+  min-height: 100vh;
+  background: url("https://fse.jegtheme.com/uneza/wp-content/uploads/sites/94/2025/04/students-studying-outdoors-enhancing-communicatio.webp")
+    center / cover no-repeat fixed;
+  position: relative;
+  padding: 0 20px 0 100px;
+  display: flex;
+  align-items: flex-end;
+    color: #fff;
+  border-bottom: 5px solid var(--primary);
+  transform-origin: center;
+}
+
+.containers::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+.guten-background-overlay {
+  position: absolute;
+  inset: 0;
+  background: url("https://paruluniversity.ac.in/wp-content/themes/parul/assets/images/png/banner-overlay-card.png")
+    center / cover;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+/* ================= HERO TEXT ================= */
+.intro-section {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin-bottom: 90px;
+  animation: fadeUp 1s var(--ease) both;
+}
+
+.intro-section .heading {
+  font-size: 66px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.intro-section .description {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 600px;
+  padding-left: 20px;
+  border-left: 5px solid #fff;
+  opacity: 0.95;
+}
+
+
+ /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary),var(--primary));
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      font-weight: 600;
+    }
+
+    /* Layout */
+    .container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .sidebar input {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin-left: -35px;
+    }
+
+    .sidebar li {
+      padding: 12px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.3s;
+    }
+
+    .sidebar li:hover,
+    .sidebar li.active {
+      background: #eef1ff;
+      color: var(--primary);
+    }
+
+    /* Main Content */
+    .content {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .content h2 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    /* Faculty Cards */
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+
+    .faculty-card {
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 5px;
+      align-items: start;
+      opacity: 0;
+      transform: translateY(30px);
+      
+      background-size: cover !important;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .faculty-card:hover{
+      .icon{
+     scale: 1.1;
+      background-color: #ffffff;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    }
+    .faculty-details {
+      display: flex;
+      width: 80%;
+      color: #fff;
+      flex-direction: column;
+      padding: 10px;
+      h4{
+        margin-bottom: -5px;
+        font-size: 18px;
+      }
+
+    }
+    a{
+      padding: 8px 12px;
+      border: 2px solid #a71837;
+      width: fit-content;
+      border-radius: 8px;
+      background-color: #a7183759;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 0.3s;  
+      cursor: pointer;
+    }
+    a:hover{
+      animation:pulse 1s ease;
+      box-shadow: 0 4px 12px rgba(167, 24, 54, 0.4);
+    }
+    @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(167, 24, 54, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(167, 24, 54, 0); }
+}
+    .icon{
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+      margin-right: 8px;
+      background-color: #ffffff65;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+    
+    .overlay{
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.767);
+      border-radius: 12px;
+      opacity: 0.8;
+      transition: opacity 0.6s;
+    }
+ 
+
+    .faculty-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      .overlay {
+        opacity: 1;
+      }
+    }
+
+    .faculty-section {
+  display: none;
+  animation: fadeSlide 0.5s ease forwards;
+}
+
+.faculty-section.active {
+  display: block;
+}
+
+
+
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+    .faculty-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ================= LARGE SCREENS (1440px+) ================= */
+@media (min-width: 1440px) {
+  .intro-section {
+    max-width: 900px;
+  }
+
+  .container {
+    padding: 50px 80px;
+  }
+}
+
+/* ================= LAPTOPS & SMALL DESKTOPS ================= */
+@media (max-width: 1200px) {
+  .containers {
+    padding-left: 60px;
+  }
+
+  .intro-section .heading {
+    font-size: 56px;
+  }
+}
+
+/* ================= TABLETS ================= */
+@media (max-width: 1024px) {
+  .containers {
+    padding: 0 40px;
+  }
+
+  .intro-section {
+    margin-bottom: 60px;
+  }
+
+  .intro-section .heading {
+    font-size: 48px;
+  }
+
+  .intro-section .description {
+    font-size: 16px;
+  }
+
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= SMALL TABLETS ================= */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+  }
+
+  header {
+    padding: 25px 15px;
+  }
+}
+
+/* ================= MOBILE DEVICES ================= */
+@media (max-width: 768px) {
+ .containers {
+        padding-left: 20px;
+        background-attachment: scroll;
+    }
+
+    .intro-section {
+        bottom: 50px;
+    }
+
+    .intro-section .heading {
+        font-size: 36px;
+    }
+
+    .intro-section .description {
+        font-size: 15px;
+    }
+
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faculty-details {
+    width: 100%;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+/* ================= SMALL PHONES ================= */
+@media (max-width: 480px) {
+  .intro-section .heading {
+    font-size: 30px;
+  }
+
+  .intro-section .description {
+    font-size: 14px;
+  }
+
+  a {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .sidebar input {
+    padding: 8px 12px;
+  }
+
+  .faculty-card {
+    padding: 15px;
+  }
+}
+
+/* ================= TOUCH DEVICES (UX FIX) ================= */
+@media (hover: none) {
+  .faculty-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  a:hover {
+    box-shadow: none;
+  }
+}
