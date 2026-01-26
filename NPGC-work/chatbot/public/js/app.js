@@ -198,7 +198,7 @@ function speak(text) {
         if (englishVoice) utterance.voice = englishVoice;
     }
     utterance.rate = 1.0;
-    utterance.pitch = 2.0;
+    utterance.pitch = 1.0;
     window.speechSynthesis.speak(utterance);
 }
 

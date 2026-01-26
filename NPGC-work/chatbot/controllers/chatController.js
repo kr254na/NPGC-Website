@@ -14,7 +14,7 @@ exports.handleChat = async (req, res) => {
   const lang = req.body.lang || "en";
   let context = req.body.context || { lastCourse: null,lastIntent:true, expectingFollowUp:false };
   const userMsg = normalize(rawMsg);
-
+  console.log(userMsg);
   if (["hi", "hello", "hey", "namaste"].includes(userMsg)) {
     return res.json({
       reply:
@@ -31,6 +31,7 @@ exports.handleChat = async (req, res) => {
     );
     let bestIntent = null;
     let highestScore = 0;
+    
     for (const item of intents) {
       const intentVector = item.Vector;
       const score = EmbeddingService.calculateSimilarity(
@@ -50,14 +51,6 @@ if (ruleIntent) {
   highestScore = ruleIntent.score;
 }
 
-/*if(highestScore<0.2){
-    
-    if(context.lastIntent){
-        bestIntent = {Intent: context.lastIntent};
-        highestScore = 1;
-    }
-}*/
-
 if (highestScore < 0.2 && context.lastIntent && context.expectingFollowUp) {
   bestIntent = { Intent: context.lastIntent };
   highestScore = 0.8;
@@ -65,7 +58,6 @@ if (highestScore < 0.2 && context.lastIntent && context.expectingFollowUp) {
 
 
     if (highestScore < 0.2) {
-    
       const isHi = lang === 'hi';
       
       return res.json({
@@ -99,6 +91,67 @@ if (highestScore < 0.2 && context.lastIntent && context.expectingFollowUp) {
     const intent = bestIntent.Intent;
     let matchedCourse = null;
 
+    
+    if (intent === "COLLEGE_ABOUT") {
+  context.lastIntent = null;
+  context.expectingFollowUp = false;
+
+  return res.json({
+    reply: getRandom(RESPONSE_VARIANTS.COLLEGE_ABOUT[lang]),
+    context
+  });
+}
+
+if (intent === "COLLEGE_ADDRESS") {
+  context.lastIntent = null;
+  context.expectingFollowUp = false;
+
+  return res.json({
+    reply: getRandom(RESPONSE_VARIANTS.COLLEGE_ADDRESS[lang]),
+    context
+  });
+}
+
+if (intent === "COLLEGE_CONTACT") {
+  context.lastIntent = null;
+  context.expectingFollowUp = false;
+
+  return res.json({
+    reply: getRandom(RESPONSE_VARIANTS.COLLEGE_CONTACT[lang]),
+    context
+  });
+}
+
+if (intent === "COLLEGE_TIMINGS") {
+  context.lastIntent = null;
+  context.expectingFollowUp = false;
+
+  return res.json({
+    reply: getRandom(RESPONSE_VARIANTS.COLLEGE_TIMINGS[lang]),
+    context
+  });
+}
+
+if (intent === "COLLEGE_AFFILIATION") {
+  context.lastIntent = null;
+  context.expectingFollowUp = false;
+
+  return res.json({
+    reply: getRandom(RESPONSE_VARIANTS.COLLEGE_AFFILIATION[lang]),
+    context
+  });
+}
+
+if (intent === "COLLEGE_TYPE") {
+  context.lastIntent = null;
+  context.expectingFollowUp = false;
+
+  return res.json({
+    reply: getRandom(RESPONSE_VARIANTS.COLLEGE_TYPE[lang]),
+    context
+  });
+}
+
     if (
       [
         "COURSE_INFO",
@@ -112,7 +165,7 @@ if (highestScore < 0.2 && context.lastIntent && context.expectingFollowUp) {
       const [rows] = await pool.execute("SELECT c.course, c.duration, c.seats, c.eligibility, c.entrance, c.admissiondeadline, ct.type, d.deptName, f.fees  FROM course c join courseType ct on c.courseTypeId=ct.id left join department d on c.deptId=d.deptId left join fees f on c.courseId=f.courseId"); 
       courses=rows;
       matchedCourse = resolveCourse(userMsg, courses, context);
-
+      
 if (matchedCourse) {
   context.lastCourse = matchedCourse;
 }
