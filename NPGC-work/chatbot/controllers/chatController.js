@@ -62,7 +62,7 @@ if (highestScore < 0.2 && context.lastIntent && context.expectingFollowUp) {
       
       return res.json({
         reply: isHi 
-          ? "मैं आपकी निम्नलिखित विषयों में सहायता कर सकता हूँ:" 
+          ? "मैं आपकी निम्नलिखित विषयों में सहायता कर सकती हूँ:" 
           : "I can help you with the following topics:",
         buttons: [
           { 
