@@ -1,0 +1,88 @@
+
+/* ===============================
+   GLOBAL RESET & SMOOTH FEEL
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.con {
+    max-width: 100%;
+    height: 100vh;
+    background: url("https://fse.jegtheme.com/uneza/wp-content/uploads/sites/94/2025/04/students-studying-outdoors-enhancing-communicatio.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding-left: 100px;
+    padding-right: 20px;
+    color: #fff;
+    border-bottom: 5px solid #A71836;
+    transition: transform 0.4s ease;
+}
+
+.con:hover {
+    transform: scale(1.01);
+}
+
+.guten-background-overlay {
+    background: url("https://paruluniversity.ac.in/wp-content/themes/parul/assets/images/png/banner-overlay-card.png");
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    mix-blend-mode: multiply;
+}
+
+.intro-section {
+    position: absolute;
+    bottom: 90px;
+    z-index: 2;
+}
+
+.intro-section .heading {
+    margin-bottom: 20px;
+    font-size: 66px;
+}
+
+.intro-section .description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    border-left: 5px solid #fff;
+    padding-left: 20px;
+}
+
+
+.container {
+  max-width: 80%;
+  margin: 5% auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.lightbox-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}

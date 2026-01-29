@@ -1,0 +1,241 @@
+:root {
+  --primary: #a71837;
+  --primary-soft: rgba(167, 24, 55, 0.15);
+  --bg-soft: #a718370d;
+  --text-dark: #1f2937;
+  --text-muted: #4a5565;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------------- RESET ---------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+  line-height: 1.6;
+}
+
+
+/* ---------------- HERO ---------------- */
+.hero {
+  min-height: clamp(65vh, 80vh, 95vh);
+  width: 100%;
+  background-image: url("https://image-static.collegedunia.com/public/college_data/images/appImage/3184_NPGC.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(69, 10, 10, 0.9),
+    rgba(127, 29, 29, 0.75),
+    rgba(15, 23, 42, 0.65)
+  );
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+/* ---------------- INTRO ---------------- */
+.intro-section {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #fff;
+  padding: clamp(16px, 5vw, 40px);
+}
+
+.intro-heading {
+  font-size: clamp(30px, 6vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  animation: floatIn 1s ease forwards;
+}
+
+.intro-subheading {
+  font-size: clamp(15px, 3vw, 20px);
+  max-width: 650px;
+  margin: 16px auto 0;
+  opacity: 0.95;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* ---------------- SCROLL REVEAL ---------------- */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: reveal 0.9s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 15% cover 40%;
+  }
+
+  @keyframes reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+/* ---------------- MAIN SECTION ---------------- */
+.main {
+  background-color: var(--bg-soft);
+  padding: clamp(20px, 4vw, 60px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 5vw, 48px);
+  align-items: center;
+}
+
+.main h1 {
+  font-size: clamp(22px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+/* ---------------- GRID ---------------- */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(16px, 3vw, 28px);
+}
+
+/* ---------------- CARD ---------------- */
+.card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(167, 24, 55, 0.08),
+    transparent
+  );
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------------- CARD IMAGE ---------------- */
+.card img {
+  width: 100%;
+  height: clamp(160px, 25vw, 220px);
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+/* .card:hover img {
+  transform: scale(1.06);
+} */
+
+/* ---------------- CARD CONTENT ---------------- */
+.card h2 {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+/* ---------------- BUTTON ---------------- */
+.card a {
+  margin-top: auto;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  border: 2px solid var(--primary);
+  background: var(--primary-soft);
+  color: var(--primary);
+  text-decoration: none;
+  font-size: clamp(14px, 2.5vw, 17px);
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card a:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(167, 24, 55, 0.5);
+  transform: translateY(-2px) scale(1.06);
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ---------------- MOBILE REFINEMENTS ---------------- */
+@media (max-width: 480px) {
+  .intro-subheading {
+    width: 100%;
+  }
+
+  .card {
+    padding: 14px;
+  }
+}

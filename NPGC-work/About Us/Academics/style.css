@@ -1,0 +1,386 @@
+/* ===============================
+   GLOBAL RESET & SMOOTH FEEL
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.con {
+    max-width: 100%;
+    height: 100vh;
+    background: url("https://fse.jegtheme.com/uneza/wp-content/uploads/sites/94/2025/04/students-studying-outdoors-enhancing-communicatio.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding-left: 100px;
+    padding-right: 20px;
+    color: #fff;
+    border-bottom: 5px solid #A71836;
+    transition: transform 0.4s ease;
+}
+
+.con:hover {
+    transform: scale(1.01);
+}
+
+.guten-background-overlay {
+    background: url("https://paruluniversity.ac.in/wp-content/themes/parul/assets/images/png/banner-overlay-card.png");
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    mix-blend-mode: multiply;
+}
+
+.intro-section {
+    position: absolute;
+    bottom: 90px;
+    z-index: 2;
+}
+
+.intro-section .heading {
+    margin-bottom: 20px;
+    font-size: 66px;
+}
+
+.intro-section .description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    border-left: 5px solid #fff;
+    padding-left: 20px;
+}
+
+/* ===============================
+   ACADEMIC PROGRAMS SECTION
+================================ */
+.academic-programs {
+    padding: 100px 80px;
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 56px;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Heading underline animation */
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 4px;
+    background: #A71836;
+    transition: width 0.6s ease;
+}
+
+.academic-programs:hover h2::after {
+    width: 120px;
+}
+
+/* ===============================
+   PROGRAM CARDS
+================================ */
+.program-bar {
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+
+}
+
+.program-bar:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.24);
+}
+
+.prog-title i {
+    transition: transform 0.4s ease;
+}
+
+.program-bar:hover .prog-title i {
+    transform: rotate(-10deg) scale(1.2);
+}
+
+/* ===============================
+   COURSES GRID
+================================ */
+.programs {
+    padding: 20px 0;
+}
+
+.courses {
+     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    align-items: stretch;
+}
+/* ===============================
+   COURSE CARD STYLE
+================================ */
+.course-title {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 16px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    animation-delay: calc(var(--i) * 0.05s);
+     height: 100%;
+    min-height: 86px;   /* adjust if needed */
+    display: flex;
+    align-items: stretch;  
+    animation: wipeIn 0.6s cubic-bezier(.4,0,.2,1) both;
+    animation-delay: calc(var(--i) * 0.08s);
+}
+
+@keyframes wipeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Soft gradient highlight */
+.course-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(167, 24, 54, 0.08),
+        rgba(167, 24, 54, 0)
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.course-title:hover::before {
+    opacity: 1;
+}
+
+/* Lift effect */
+.course-title:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+    border-style: solid;
+}
+
+/* Click / press effect */
+.course-title:active {
+    transform: scale(0.98);
+}
+
+/* ===============================
+   COURSE LINK LAYOUT
+================================ */
+.course-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    position: relative;
+    z-index: 2;
+       display: flex;
+    align-items: center;        /* vertical center */
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* Title text */
+.course-link span {
+  line-height: 1.5;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* ===============================
+   RIGHT ICON STYLE
+================================ */
+.course-link i {
+   height: 28px;
+    width: 28px;
+    background: #A71836;
+    color: #fff;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    transition: all 0.35s ease;
+     transform: translateX(-6px);
+    opacity: 0.85;
+}
+
+.course-title:hover{
+       transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+    border-color: #A71836;
+}
+
+/* Icon motion */
+.course-title:hover .course-link i {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Icon pulse */
+.course-title:hover .course-link i {
+    animation: pulse 0.8s ease;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(167, 24, 54, 0.5); }
+    70% { box-shadow: 0 0 0 10px rgba(167, 24, 54, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(167, 24, 54, 0); }
+}
+
+/* ===============================
+   WIPE BACKGROUND EFFECT
+================================ */
+.course-title::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(167, 24, 54, 0.12),
+        rgba(167, 24, 54, 0.25)
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+    z-index: 1;
+}
+
+/* Trigger wipe on hover */
+.course-title:hover::after {
+    transform: scaleX(1);
+}
+
+/* Keep text above wipe */
+.course-title * {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* ===============================
+   SCROLL REVEAL ANIMATIONS
+   🔥 THIS IS THE "REVEAL" PART
+================================ */
+.reveal,
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.reveal {
+    transform: translateY(60px);
+}
+
+.reveal-left {
+    transform: translateX(-80px);
+}
+
+.reveal-right {
+    transform: translateX(80px);
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 767px) {
+    .con {
+        padding-left: 20px;
+    }
+
+    .intro-section .heading {
+        font-size: 36px;
+    }
+
+    .intro-section .description {
+        font-size: 14px;
+    }
+
+    .academic-programs {
+        padding: 50px 20px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .courses {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .courses {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1023px) {
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .courses {
+        grid-template-columns: 1fr;
+    }
+}

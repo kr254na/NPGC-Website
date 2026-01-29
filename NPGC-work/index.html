@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-black text-white flex justify-between items-center p-2">
+  <div class="bg-black social-header text-white flex justify-between items-center p-2">
     <div class="flex gap-4">
       <a href="https://www.linkedin.com/school/national-pg-college/" target="_blank" title="LinkedIn" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-linkedin"></i></a>
       <a href="https://www.facebook.com/npgcin" target="_blank" title="Facebook" class="w-8 h-8 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-white hover:bg-opacity-30 transition duration-300"><i class="fab fa-facebook-f"></i></a>
@@ -21,34 +21,34 @@
     </div>
   </div>
 
-  <header class="bg-white bg-opacity-90 py-8 px-10 border-b-4 border-red-900 relative">
+  <header class="bg-white bg-opacity-90 py-4 px-6 border-b-4 border-red-900 relative">
     <div class="absolute inset-0 bg-white bg-opacity-80"></div>
     <div class="max-w-6xl mx-auto flex justify-between items-center relative z-10">
-      <img src="assets/logo-left.png" alt="NPGC Logo" class="w-32 h-32 rounded-lg">
-      
+      <img src="assets/logo-left.png" alt="NPGC Logo" class="w-20 h-20 rounded-lg">
+
       <div class="text-center flex-grow px-4">
-        <h1 class="text-3xl font-bold text-cyan-800 mb-1">नेशनल स्नातकोत्तर महाविद्यालय (स्वायत्त)</h1>
-        
-        <h2 class="text-2xl font-bold text-red-800 mb-2 uppercase tracking-tight">National Post Graduate College (Autonomous)</h2>
-        
+        <h1 class="text-2xl font-bold text-cyan-800 mb-1">नेशनल स्नातकोत्तर महाविद्यालय (स्वायत्त)</h1>
+
+        <h2 class="text-xl font-bold text-red-800 mb-2 uppercase tracking-tight">National Post Graduate College (Autonomous)</h2>
+
         <div class="flex items-center justify-center gap-4 my-2">
           <div class="h-[2px] bg-green-700 flex-grow max-w-[80px] hidden md:block"></div>
-          <p class="text-lg md:text-xl font-bold text-green-800 whitespace-nowrap">
+          <p class="text-base md:text-lg font-bold text-green-800 whitespace-nowrap">
             लखनऊ विश्वविद्यालय | UNIVERSITY OF LUCKNOW
           </p>
           <div class="h-[2px] bg-green-700 flex-grow max-w-[80px] hidden md:block"></div>
         </div>
-        
-        <p class="text-gray-800 text-sm font-bold mt-1">NAAC Grade ‘A’ with 3.17 CGPA | CPE</p>
+
+        <p class="text-gray-800 text-sm font-bold mt-1">NAAC Grade 'A' with 3.17 CGPA | CPE</p>
       </div>
 
-      <img src="assets/logo-right.png" alt="NPGC Right Logo" class="w-32 h-32 rounded-lg">
+      <img src="assets/logo-right.png" alt="NPGC Right Logo" class="w-20 h-20 rounded-lg">
     </div>
   </header>
 
   <nav class="navbar">
     <div class="nav-container">
-      <div class="menu-toggle" id="menu-toggle">
+      <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -57,22 +57,22 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a>
           <ul class="sub-menu">
-            <li><a href="#">The College</a></li>
-            <li><a href="#">Vision and Mission</a></li>
-            <li><a href="#">Principal’s Desk</a></li>
-            <li><a href="#">Achievements</a></li>
-            <li><a href="#">Administrations and Committees</a></li>
+            <li><a href="About Us/Faculty&Dev/Faculty&Dev.html">Faculty & Development</a></li>
+            <li><a href="About Us/News/news.html">News</a></li>
+                <li><a href="About Us/AcademicCalendar/academicCalendar.html">Academic Calendar</a></li>
+                <li><a href="About Us/Exam&Ass/Exam&Ass.html">Examination & Assessments</a></li>
+                <li><a href="#">Administrations and Committees</a></li>
             <li><a href="#">Annual Reports</a></li>
             <li><a href="#">Accreditations & Ranking</a></li>
-            <li><a href="#">Infrastructure & Facilities</a></li>
           </ul>
         </li>
         <li><a href="#academics">Academics</a>
           <ul class="sub-menu">
-            <li><a href="NPGC-Website/Academics/index.html">Programs Offered</a></li>
-            <li><a href="NPGC-Website/Faculty&Dev/Faculty&Dev.html">Departments & Faculties</a></li>
-            <li><a href="NPGC-Website/Syllabus/syllabus.html">Syllabus</a></li>
-            <li><a href="#">Class Schedule</a></li>
+            <li><a href="About Us/Academics/index.html">Programs Offered</a></li>
+            <li><a href="About Us/Faculty&Dev/Faculty&Dev.html">Departments & Faculties</a></li>
+            <li><a href="About Us/Syllabus/syllabus.html">Syllabus</a></li>
+            <li><a href="About Us/AcademicCalendar/academicCalendar.html">Academic Calendar</a></li>
+            <li><a href="About Us/ClassSchedule/classSchedule.html">Class Schedule</a></li>
             <li><a href="#">Research</a></li>
             <li><a href="#">Distance Learning Centers</a></li>
             <li><a href="#">Centre for Vocational & Futuristic Studies</a></li>
@@ -96,9 +96,21 @@
             <li><a href="#">OPAC</a></li>
           </ul>
         </li>
+        <li><a href="#facilities">Facilities</a>
+        <ul class="sub-menu">
+            <li><a href="./About Us/Facilities/Infrastructure/index.html">Infrastructure</a></li>
+            <li><a href="./About Us/Facilities/Hostel/index.html">Hostel</a></li>
+            <li><a href="./About Us/Facilities/Canteen/index.html">Canteen</a></li>
+            <li><a href="./About Us/Facilities/Laboratories/index.html">Laboratory</a></li>
+            <li><a href="./About Us/Facilities/Library/index.html">Library</a></li>
+            <li><a href="./About Us/Facilities/Medical/index.html">Medical</a></li>
+            <li><a href="./About Us/Facilities/Sports and Games/index.html">Sports</a></li>
+            <li><a href="./About Us/Facilities/Student Units/index.html">Student Units</a></li>
+          </ul>
+        </li>
         <li><a href="#examinations">Examinations</a>
           <ul class="sub-menu">
-            <li><a href="#">Examination & Assessments</a></li>
+            <li><a href="About Us/Exam&Ass/Exam&Ass.html">Examination & Assessments</a></li>
             <li><a href="#">Examination Forms</a></li>
             <li><a href="#">Examination Schedule</a></li>
             <li><a href="#">Examination Results</a></li>
@@ -108,7 +120,7 @@
         <li><a href="#students">Students</a>
           <ul class="sub-menu">
             <li><a href="#">Online Fees Payment</a></li>
-            <li><a href="NPGC-Website/Syllabus/syllabus.html">Syllabus</a></li>
+            <li><a href="About Us/Syllabus/syllabus.html">Syllabus</a></li>
             <li><a href="#">Student Grievance</a></li>
             <li><a href="#">Scholarships</a></li>
           </ul>
@@ -119,16 +131,18 @@
             <li><a href="#">College in News</a></li>
           </ul>
         </li>
-        <li><a href="NPGC-Website/Contact/contact.html">Contact Us</a></li>
+        <li><a href="About Us/Contact/contact.html">Contact Us</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="relative text-white py-32 px-10 text-center min-h-screen flex items-center justify-center overflow-hidden" id="home">
+  <section class="relative hero text-white py-10 md:py-20 px-10 text-center min-h-[50vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden" id="home">
     <div class="absolute inset-0">
-      <img src="assets/hero-campus.jpg" alt="Campus" class="w-full h-full object-cover">
+      <!-- <img src="assets/hero-campus.jpg" alt="Campus" class="w-full h-full object-cover"> -->
     </div>
-    <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-900 opacity-70"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-red-900 via-black to-red-900 opacity-70"></div>
+
+
     <div class="relative z-10 max-w-4xl mx-auto">
       <h1 class="text-5xl md:text-6xl font-bold mb-6 text-shadow-lg">Welcome to National P. G. College</h1>
       <p class="text-xl md:text-2xl mb-10 opacity-90">We Design the Future and Set Trends for Others to Follow</p>
@@ -136,45 +150,7 @@
         <button class="bg-gradient-to-r from-red-900 to-black text-white px-8 py-4 rounded-lg font-semibold hover:from-red-800 hover:to-gray-900 transition duration-300 shadow-lg transform hover:scale-105">Apply Now</button>
         <button class="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-semibold border-2 border-white hover:bg-opacity-30 transition duration-300 shadow-lg transform hover:scale-105">Explore Programs</button>
       </div>
-    </div>
-  </section>
 
-  <section class="bg-gradient-to-br from-red-50 via-white to-red-50 py-20 px-10">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-red-800 mb-4">Our Achievements</h2>
-        <p class="text-gray-600 text-lg">Numbers that speak for themselves</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-red-500">
-          <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-book text-white text-2xl"></i>
-          </div>
-          <h3 class="text-4xl font-bold text-red-800 mb-2 stat-number" data-target="35">0</h3>
-          <p class="text-gray-600 font-semibold">Programs</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-blue-500">
-          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-building text-white text-2xl"></i>
-          </div>
-          <h3 class="text-4xl font-bold text-blue-800 mb-2 stat-number" data-target="22">0</h3>
-          <p class="text-gray-600 font-semibold">Departments</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-green-500">
-          <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-users text-white text-2xl"></i>
-          </div>
-          <h3 class="text-4xl font-bold text-green-800 mb-2 stat-number" data-target="6500">0</h3>
-          <p class="text-gray-600 font-semibold">Students</p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-purple-500">
-          <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
-          </div>
-          <h3 class="text-4xl font-bold text-purple-800 mb-2 stat-number" data-target="100">0</h3>
-          <p class="text-gray-600 font-semibold">Faculties</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -183,7 +159,7 @@
       <h2 class="text-4xl font-bold text-red-800 mb-12 text-left">Latest @ NPGC</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-          <div class="bg-gradient-to-r from-red-500 to-red-700 text-white px-6 py-3 text-sm font-bold text-center">JAN 24</div>
+          <div class="bg-gradient-to-r from-black to-red-700 text-white px-6 py-3 text-sm font-bold text-center">JAN 24</div>
           <div class="p-6">
             <h3 class="text-xl font-semibold text-red-800 mb-3">Placement: NextHire</h3>
             <p class="text-gray-600 mb-4">New placement opportunity with NextHire for eligible students</p>
@@ -191,7 +167,7 @@
           </div>
         </div>
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-          <div class="bg-gradient-to-r from-red-500 to-red-700 text-white px-6 py-3 text-sm font-bold text-center">DEC 27</div>
+          <div class="bg-gradient-to-r from-black to-red-900 text-white px-6 py-3 text-sm font-bold text-center">DEC 27</div>
           <div class="p-6">
             <h3 class="text-xl font-semibold text-red-800 mb-3">Semester Fees Notice</h3>
             <p class="text-gray-600 mb-4">Important notice regarding semester fee payment deadline</p>
@@ -199,7 +175,15 @@
           </div>
         </div>
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-          <div class="bg-gradient-to-r from-red-500 to-red-700 text-white px-6 py-3 text-sm font-bold text-center">DEC 26</div>
+          <div class="bg-gradient-to-r from-black to-red-700 text-white px-6 py-3 text-sm font-bold text-center">DEC 26</div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-red-800 mb-3">Orientation Program</h3>
+            <p class="text-gray-600 mb-4">Orientation program for Ph.D Students scheduled</p>
+            <a href="#" class="text-red-600 font-semibold hover:text-red-800 transition duration-300">Read More →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <div class="bg-gradient-to-r from-black to-red-700 text-white px-6 py-3 text-sm font-bold text-center">DEC 26</div>
           <div class="p-6">
             <h3 class="text-xl font-semibold text-red-800 mb-3">Orientation Program</h3>
             <p class="text-gray-600 mb-4">Orientation program for Ph.D Students scheduled</p>
@@ -210,29 +194,35 @@
     </div>
   </section>
 
+  
   <section class="notices-section">
     <div class="container">
       <h2 class="section-title">Important Notices</h2>
-      <div class="notices-list">
-        <div class="notice-item">
-          <span class="notice-date">DEC 27</span>
-          <span class="notice-title">Semester Fees Notice</span>
+      <div class="notices-grid">
+        <div class="notice-card">
+          <div class="notice-date">DEC 27</div>
+          <h3 class="notice-title">Semester Fees Notice</h3>
+          <p class="notice-description">Important notice regarding semester fee payment deadline</p>
         </div>
-        <div class="notice-item">
-          <span class="notice-date">DEC 26</span>
-          <span class="notice-title">Orientation program for Ph.D Students</span>
+        <div class="notice-card">
+          <div class="notice-date">DEC 26</div>
+          <h3 class="notice-title">Orientation program for Ph.D Students</h3>
+          <p class="notice-description">Orientation program scheduled for Ph.D students</p>
         </div>
-        <div class="notice-item">
-          <span class="notice-date">DEC 24</span>
-          <span class="notice-title">Scholarship notice</span>
+        <div class="notice-card">
+          <div class="notice-date">DEC 24</div>
+          <h3 class="notice-title">Scholarship notice</h3>
+          <p class="notice-description">Details about available scholarships</p>
         </div>
-        <div class="notice-item">
-          <span class="notice-date">DEC 21</span>
-          <span class="notice-title">Holiday Notice: Christmas</span>
+        <div class="notice-card">
+          <div class="notice-date">DEC 21</div>
+          <h3 class="notice-title">Holiday Notice: Christmas</h3>
+          <p class="notice-description">College will be closed for Christmas holiday</p>
         </div>
-        <div class="notice-item">
-          <span class="notice-date">DEC 20</span>
-          <span class="notice-title">Commencement of classes</span>
+        <div class="notice-card">
+          <div class="notice-date">DEC 20</div>
+          <h3 class="notice-title">Commencement of classes</h3>
+          <p class="notice-description">Classes will commence as per schedule</p>
         </div>
       </div>
       <a href="#" class="view-all-btn">View All Important Notices →</a>
@@ -241,7 +231,7 @@
 
   <section class="placement-section">
     <div class="container">
-      <h2 class="section-title">Placement Notices</h2>
+      <h2 class="section-title">Placements at a Glance</h2>
       <div class="placement-grid">
         <div class="placement-card">
           <span class="placement-date">JAN 24</span>
@@ -260,7 +250,7 @@
           <h3>Placement: Stanza Living</h3>
         </div>
       </div>
-      <a href="#" class="view-all-btn">View All Placement Notices →</a>
+      <a href="#" class="view-all-btn">View All Placement Updates →</a>
     </div>
   </section>
 
@@ -304,20 +294,64 @@
     <div class="container">
       <h2 class="section-title">Quick Links</h2>
       <div class="links-grid">
-        <a href="#" class="link-btn">Academic Calendar</a>
-        <a href="NPGC-Website/Academics/index.html" class="link-btn">Programs Offered</a>
-        <a href="#" class="link-btn">Examination Forms</a>
+        <a href="About Us/AcademicCalendar/academicCalendar.html" class="link-btn">Academic Calendar</a>
+        <a href="About Us/Academics/index.html" class="link-btn">Programs Offered</a>
+        <a href="About Us/Exam&Ass/Exam&Ass.html" class="link-btn">Examination Forms</a>
         <a href="#" class="link-btn">Examination Result</a>
-        <a href="NPGC-Website/Faculty&Dev/Faculty&Dev.html" class="link-btn">Faculty Zone</a>
+        <a href="About Us/Faculty&Dev/Faculty&Dev.html" class="link-btn">Faculty Zone</a>
         <a href="#" class="link-btn">Research</a>
       </div>
     </div>
   </section>
-  <iframe 
+  <section class="bg-gradient-to-br from-red-50 via-white to-red-50 py-20 px-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-red-800 mb-4">Our Achievements</h2>
+        <p class="text-gray-600 text-lg">Numbers that speak for themselves</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-red-500">
+          <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-book text-white text-2xl"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-red-800 mb-2 stat-number" data-target="35">0</h3>
+          <p class="text-gray-600 font-semibold">Programs</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-blue-500">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-building text-white text-2xl"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-blue-800 mb-2 stat-number" data-target="22">0</h3>
+          <p class="text-gray-600 font-semibold">Departments</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-green-500">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-users text-white text-2xl"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-green-800 mb-2 stat-number" data-target="6500">0</h3>
+          <p class="text-gray-600 font-semibold">Students</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-110 transition duration-500 hover:shadow-2xl border-t-4 border-purple-500">
+          <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+          </div>
+          <h3 class="text-4xl font-bold text-purple-800 mb-2 stat-number" data-target="100">0</h3>
+          <p class="text-gray-600 font-semibold">Faculties</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <iframe
     src="http://localhost:3000"
     width="380"
     height="620",
     allowtransparency="true"
+    title="Hi There!! I am NPGC Assistant - Click to get help with admissions, courses, faculty, and more!"
     style="
       background: transparent;
       border:none;
@@ -327,6 +361,41 @@
       border-radius:10px;
       z-index: 100;">
   </iframe>
+
+  <!-- NEWS SCROLLER BUTTON -->
+  <button id="newsBtn" aria-label="Toggle News" style="position: fixed; bottom: 1%; left: 1%; width: 56px; height: 56px; border-radius: 50%; border: none; font-size: 22px; cursor: pointer; color: #fff; background: linear-gradient(135deg, #8b0000, #2b2b2b); box-shadow: 0 4px 14px rgba(0,0,0,0.5); z-index: 10000;">📰</button>
+
+  <!-- NEWS PANEL -->
+  <div id="newsPanel" class="open">
+    <div class="news-header">Latest News</div>
+    <div class="news-body">
+      <div class="news-track">
+        <ul>
+          <li>Workshop on Data Science – Register Now</li>
+          <li>Annual Cultural Fest Dates Announced</li>
+          <li>Admissions Open for Session 2026–27</li>
+          <li>NAAC Peer Team Visit Scheduled</li>
+          <li>Semester Exams Begin from March 10</li>
+          <li>National Seminar on AI – Feb 15</li>
+          <li>Placement Drive for Final Year Students</li>
+          <li>Library Timings Extended During Exams</li>
+          <li>Scholarship Forms Deadline Extended</li>
+        </ul>
+        <!-- DUPLICATE FOR SEAMLESS LOOP -->
+        <ul>
+          <li>Workshop on Data Science – Register Now</li>
+          <li>Annual Cultural Fest Dates Announced</li>
+          <li>Admissions Open for Session 2026–27</li>
+          <li>NAAC Peer Team Visit Scheduled</li>
+          <li>Semester Exams Begin from March 10</li>
+          <li>National Seminar on AI – Feb 15</li>
+          <li>Placement Drive for Final Year Students</li>
+          <li>Library Timings Extended During Exams</li>
+          <li>Scholarship Forms Deadline Extended</li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <footer>
     <div class="footer-container">
       <div class="footer-section">
@@ -370,5 +439,28 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("newsBtn");
+      const panel = document.getElementById("newsPanel");
+
+      btn.addEventListener("click", () => {
+        const isOpen = panel.classList.contains("open");
+
+        if (isOpen) {
+          panel.classList.remove("open");
+          panel.classList.add("closed");
+        } else {
+          panel.classList.add("open");
+          panel.classList.remove("closed");
+        }
+      });
+    });
+  </script>
+
+
 </body>
 </html>
+
+
